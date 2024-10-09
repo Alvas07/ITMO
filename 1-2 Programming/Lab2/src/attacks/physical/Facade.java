@@ -21,8 +21,10 @@ public class Facade extends PhysicalMove {
             case PARALYZE:
                 super.applyOppDamage(def, damage);
                 super.applyOppDamage(def, damage);
+                break;
             default:
                 super.applyOppDamage(def, damage);
+                break;
         }
     }
 
