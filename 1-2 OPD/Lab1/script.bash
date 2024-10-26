@@ -72,10 +72,10 @@ echo "====Finished 3===="
 echo "====Started 4===="
 # 4.1
 echo "====4.1===="
-wc -m $(ls -d d* */d* */*/d* 2>/tmp/errors) 2>>/tmp/errors | sort -r
+wc -m $(ls -d d* */d* */*/d* 2>/tmp/err) 2>>/tmp/err | sort -r
 # 4.2
 echo "====4.2===="
-ls -lit riolu5 2>>/tmp/errors
+ls -lit riolu5 2>>/tmp/err
 # 4.3
 echo "====4.3===="
 cat $(ls -d d* */d* */*/d*) | sort
@@ -84,7 +84,7 @@ echo "====4.4===="
 ls -liR riolu5 2>/dev/null | sort -nk3
 # 4.5
 echo "====4.5===="
-ls -lit *e */*e */*/*e  2>>/tmp/errors | tail -4
+ls -lit *e */*e */*/*e  2>>/tmp/err | tail -4
 # 4.6
 echo "====4.6===="
 cat $(ls -d *4 */*4 */*/*4 2>&1) 2>&1 | sort
