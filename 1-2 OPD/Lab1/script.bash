@@ -40,6 +40,7 @@ chmod ug=wx,o=rx wormadam4/drowzee
 chmod 664 wormadam4/cubone
 chmod u=rx,g=x,o=w wormadam4/drifblim
 chmod uo=wx,g=rw wormadam4/pichu
+ls -lR
 echo "====Finished 2===="
 
 # Task 3
@@ -108,6 +109,7 @@ chmod 700 venomoth2
 chmod -R 700 venomoth2/metagross
 rm -rf venomoth2/metagross
 chmod 307 venomoth2
+ls -lR
 echo "====Finished 5===="
 
 # Deleting lab0
