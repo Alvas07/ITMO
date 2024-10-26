@@ -87,7 +87,7 @@ echo "====4.5===="
 ls -lit *e */*e */*/*e  2>>/tmp/err | tail -4
 # 4.6
 echo "====4.6===="
-cat $(ls -d *4 */*4 */*/*4 2>&1) 2>&1 | sort
+cat $(ls -d *4 */*4 */*/*4) 2>&1 | sort
 echo "====Finished 4===="
 
 # Task 5
@@ -101,16 +101,16 @@ rm -f riolu5/kabutopspipl*
 # 5.4
 rm -f venomoth2/snivyraic*
 # 5.5
-chmod -R u+w riolu5
+chmod -R 700 riolu5
 rm -rf riolu5
 # 5.6
-chmod u+r venomoth2
-chmod -R u+w venomoth2/metagross
+chmod 700 venomoth2
+chmod -R 700 venomoth2/metagross
 rm -rf venomoth2/metagross
 chmod 307 venomoth2
 echo "====Finished 5===="
 
 # Deleting lab0
 cd ..
-chmod -R u+w lab0
+chmod -R 700 lab0
 rm -r lab0
