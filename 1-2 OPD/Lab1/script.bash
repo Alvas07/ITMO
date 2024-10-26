@@ -60,7 +60,7 @@ ln raichu6 venomoth2/snivyraichu
 # 3.5
 chmod u+r riolu5/kabutops
 cat venomoth2/snivy riolu5/kabutops > raichu6_98
-chmod u-r riolu5/kabutops
+chmod 046 riolu5/kabutops
 # 3.6
 ln -s venomoth2 Copy_84
 # 3.7
@@ -93,31 +93,24 @@ echo "====Finished 4===="
 # Task 5
 echo "====Started 5===="
 # 5.1
-chmod 777 tentacool8
 rm -f tentacool8
 # 5.2
-chmod 777 venomoth2/timburr
 rm -f venomoth2/timburr
 # 5.3
-chmod 777 riolu5
 rm -f riolu5/kabutopspipl*
-chmod u=wx,go=x riolu5
 # 5.4
-chmod 777 venomoth2
-chmod 777 venomoth2/snivyraic*
 rm -f venomoth2/snivyraic*
-chmod 307 venomoth2
 # 5.5
-chmod -R 777 riolu5
+chmod -R u+w riolu5
 rm -rf riolu5
 # 5.6
-chmod 777 venomoth2
-chmod -R 777 venomoth2/metagross
+chmod u+r venomoth2
+chmod -R u+w venomoth2/metagross
 rm -rf venomoth2/metagross
 chmod 307 venomoth2
 echo "====Finished 5===="
 
 # Deleting lab0
 cd ..
-chmod -R 777 lab0
+chmod -R u+w lab0
 rm -r lab0
