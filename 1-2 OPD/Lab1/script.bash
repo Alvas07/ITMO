@@ -94,26 +94,26 @@ echo "====Finished 4===="
 echo "====Started 5===="
 # 5.1
 chmod 777 tentacool8
-rm tentacool8
+rm -f tentacool8
 # 5.2
 chmod 777 venomoth2/timburr
-rm venomoth2/timburr
+rm -f venomoth2/timburr
 # 5.3
 chmod 777 riolu5
-rm riolu5/kabutopspipl*
+rm -f riolu5/kabutopspipl*
 chmod u=wx,go=x riolu5
 # 5.4
 chmod 777 venomoth2
 chmod 777 venomoth2/snivyraic*
-rm venomoth2/snivyraic*
+rm -f venomoth2/snivyraic*
 chmod 307 venomoth2
 # 5.5
 chmod -R 777 riolu5
-rm -r riolu5
+rm -rf riolu5
 # 5.6
 chmod 777 venomoth2
 chmod -R 777 venomoth2/metagross
-rm -r venomoth2/metagross
+rm -rf venomoth2/metagross
 chmod 307 venomoth2
 echo "====Finished 5===="
 
