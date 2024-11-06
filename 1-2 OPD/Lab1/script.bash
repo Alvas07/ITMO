@@ -73,13 +73,15 @@ echo "====Finished 3===="
 echo "====Started 4===="
 # 4.1
 echo "====4.1===="
-wc -m $(ls -d */d*) 2>>/tmp/err | sort -r
+# ПОМЕНЯТЬ
+wc -m $(ls -dp */d* | grep -v "\/$") 2>>/tmp/err | sort -r
 # 4.2
 echo "====4.2===="
 ls -lit riolu5 2>>/tmp/err
 # 4.3
 echo "====4.3===="
-cat $(ls -d */d*) | sort
+# ПОМЕНЯТЬ
+cat $(ls -dp */d* | grep -v "\/$") | sort
 # 4.4
 echo "====4.4===="
 ls -liR riolu5 2>/dev/null | sort -nk3
@@ -88,7 +90,7 @@ echo "====4.5===="
 ls -lit *e */*e */*/*e  2>>/tmp/err | tail -4
 # 4.6
 echo "====4.6===="
-cat $(ls -d *4) 2>&1 | sort
+cat $(ls -dp *4 | grep -v "\/$") 2>&1 | sort
 echo "====Finished 4===="
 
 # Task 5
