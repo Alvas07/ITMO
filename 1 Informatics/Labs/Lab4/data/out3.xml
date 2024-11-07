@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<schedule type="dict">
+		<Wednesday type="dict">
+			<lesson1 type="dict">
+				<name type="str">Информатика</name>
+				<group type="str">Информ 1 (P3106, P3107, P3108, P3109, P3110, P3111, P3112, P3113, P3114, P3115, P3116, P3117, P3118, P3119)</group>
+				<teacher type="str">Балакшин Павел Валерьевич</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">3</day>
+				</date>
+				<class_type type="str">Лекция</class_type>
+				<time type="dict">
+					<start type="str">8:20</start>
+					<end type="str">9:50</end>
+				</time>
+				<classroom type="str">Ауд. Актовый зал (1216/0 (усл))</classroom>
+				<address type="str">ул. Ломоносова, д. 9, лит. М</address>
+			</lesson1>
+			<lesson2 type="dict">
+				<name type="str">Программирование</name>
+				<group type="str">Прог 1 (P3106, P3107, P3108, P3109, P3110, P3111, P3112, P3113, P3114, P3115, P3116, P3117, P3118, P3119, P3120, P3121, P3122, P3123, P3124, P3130, P3131, P3132)</group>
+				<teacher type="str">Гаврилов Антон Валерьевич</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">1</weeks_item>
+						<weeks_item type="int">3</weeks_item>
+						<weeks_item type="int">5</weeks_item>
+						<weeks_item type="int">7</weeks_item>
+						<weeks_item type="int">9</weeks_item>
+						<weeks_item type="int">11</weeks_item>
+						<weeks_item type="int">13</weeks_item>
+						<weeks_item type="int">15</weeks_item>
+					</weeks>
+					<day type="int">3</day>
+				</date>
+				<class_type type="str">Лекция</class_type>
+				<time type="dict">
+					<start type="str">8:20</start>
+					<end type="str">9:50</end>
+				</time>
+				<classroom type="str">Ауд. Актовый зал (1216/0 (усл))</classroom>
+				<address type="str">ул. Ломоносова, д. 9, лит. М</address>
+			</lesson2>
+			<lesson3 type="dict">
+				<name type="str">Основы профессиональной деятельности</name>
+				<group type="str">Осн Проф деят 1 (P3106, P3107, P3108, P3109, P3110, P3111, P3112, P3113, P3114, P3115, P3116, P3117, P3118, P3119, P3120, P3121, P3122, P3123, P3124, P3130, P3131, P3132)</group>
+				<teacher type="str">Клименков Сергей Викторович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">3</day>
+				</date>
+				<class_type type="str">Лекция</class_type>
+				<time type="dict">
+					<start type="str">10:00</start>
+					<end type="str">11:30</end>
+				</time>
+				<classroom type="str">Ауд. Актовый зал (1216/0 (усл))</classroom>
+				<address type="str">ул. Ломоносова, д. 9, лит. М</address>
+			</lesson3>
+			<lesson4 type="dict">
+				<name type="str">Программирование</name>
+				<group type="str">Прог 1.21 (P3131)</group>
+				<teacher type="str">Бобрусь Александр Владимирович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">3</day>
+				</date>
+				<class_type type="str">Лабораторные занятия</class_type>
+				<time type="dict">
+					<start type="str">13:30</start>
+					<end type="str">15:00</end>
+				</time>
+				<classroom type="str">Ауд. 1415</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson4>
+			<lesson5 type="dict">
+				<name type="str">Программирование</name>
+				<group type="str">Прог 1.21 (P3131)</group>
+				<teacher type="str">Бобрусь Александр Владимирович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">3</day>
+				</date>
+				<class_type type="str">Лабораторные занятия</class_type>
+				<time type="dict">
+					<start type="str">15:20</start>
+					<end type="str">16:50</end>
+				</time>
+				<classroom type="str">Ауд. 1415</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson5>
+		</Wednesday>
+		<Friday type="dict">
+			<lesson1 type="dict">
+				<name type="str">Математический анализ</name>
+				<group type="str">Мат Ан 6</group>
+				<teacher type="str">Правдин Константин Владимирович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">1</weeks_item>
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">3</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">5</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">7</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">9</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">11</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">13</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">15</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">5</day>
+				</date>
+				<class_type type="str">Лекция</class_type>
+				<time type="dict">
+					<start type="str">10:00</start>
+					<end type="str">11:30</end>
+				</time>
+				<classroom type="str">Ауд. 2407</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson1>
+			<lesson2 type="dict">
+				<name type="str">Математический анализ</name>
+				<group type="str">Мат Ан 6.2</group>
+				<teacher type="str">Правдин Константин Владимирович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">1</weeks_item>
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">3</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">5</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">7</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">9</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">11</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">13</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">15</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">5</day>
+				</date>
+				<class_type type="str">Практические занятия</class_type>
+				<time type="dict">
+					<start type="str">11:40</start>
+					<end type="str">13:10</end>
+				</time>
+				<classroom type="str">Ауд. 1316</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson2>
+			<lesson3 type="dict">
+				<name type="str">Основы дискретной математики (базовый уровень)</name>
+				<group type="str">ДИСКР МАТЕМ БАЗ 4</group>
+				<teacher type="str">Поляков Владимир Иванович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">1</weeks_item>
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">3</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">5</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">7</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">9</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">11</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">13</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">15</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">5</day>
+				</date>
+				<class_type type="str">Лекция</class_type>
+				<time type="dict">
+					<start type="str">17:00</start>
+					<end type="str">18:30</end>
+				</time>
+				<classroom type="str">Ауд. 1428</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson3>
+			<lesson4 type="dict">
+				<name type="str">Основы дискретной математики (базовый уровень)</name>
+				<group type="str">ДИСКР МАТЕМ БАЗ 4.1</group>
+				<teacher type="str">Поляков Владимир Иванович</teacher>
+				<date type="dict">
+					<weeks type="list">
+						<weeks_item type="int">1</weeks_item>
+						<weeks_item type="int">2</weeks_item>
+						<weeks_item type="int">3</weeks_item>
+						<weeks_item type="int">4</weeks_item>
+						<weeks_item type="int">5</weeks_item>
+						<weeks_item type="int">6</weeks_item>
+						<weeks_item type="int">7</weeks_item>
+						<weeks_item type="int">8</weeks_item>
+						<weeks_item type="int">9</weeks_item>
+						<weeks_item type="int">10</weeks_item>
+						<weeks_item type="int">11</weeks_item>
+						<weeks_item type="int">12</weeks_item>
+						<weeks_item type="int">13</weeks_item>
+						<weeks_item type="int">14</weeks_item>
+						<weeks_item type="int">15</weeks_item>
+						<weeks_item type="int">16</weeks_item>
+					</weeks>
+					<day type="int">5</day>
+				</date>
+				<class_type type="str">Практические занятия</class_type>
+				<time type="dict">
+					<start type="str">18:40</start>
+					<end type="str">20:10</end>
+				</time>
+				<classroom type="str">Ауд. 1428</classroom>
+				<address type="str">Кронверкский пр., д. 49, лит. А</address>
+			</lesson4>
+		</Friday>
+	</schedule>
+</root>
