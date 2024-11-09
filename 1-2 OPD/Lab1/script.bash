@@ -73,7 +73,7 @@ echo "====Finished 3===="
 echo "====Started 4===="
 # 4.1
 echo "====4.1===="
-wc -m $(ls -dp ./**/d*) 2>>/tmp/err | sort -r
+wc -m $(ls -dp ./**/d*) 2>>/tmp/err | sort -nr
 # 4.2
 echo "====4.2===="
 ls -lit riolu5 2>>/tmp/err
