@@ -65,7 +65,7 @@ chmod 046 riolu5/kabutops
 # 3.6
 ln -s venomoth2 Copy_84
 # 3.7
-ln -s piplup4 riolu5/kabutopspiplup
+ln -s ../piplup4 riolu5/kabutopspiplup
 ls -lR
 echo "====Finished 3===="
 
@@ -73,24 +73,22 @@ echo "====Finished 3===="
 echo "====Started 4===="
 # 4.1
 echo "====4.1===="
-# ПОМЕНЯТЬ
-wc -m $(ls -dp */d* | grep -v "\/$") 2>>/tmp/err | sort -r
+wc -m $(ls -dp ./**/d*) 2>>/tmp/err | sort -r
 # 4.2
 echo "====4.2===="
 ls -lit riolu5 2>>/tmp/err
 # 4.3
 echo "====4.3===="
-# ПОМЕНЯТЬ
-cat $(ls -dp */d* | grep -v "\/$") | sort
+cat $(ls -dp ./**/d*) | sort
 # 4.4
 echo "====4.4===="
 ls -liR riolu5 2>/dev/null | sort -nk3
 # 4.5
 echo "====4.5===="
-ls -lit *e */*e */*/*e  2>>/tmp/err | tail -4
+ls -lit ./**/*e  2>>/tmp/err | tail -4
 # 4.6
 echo "====4.6===="
-cat $(ls -dp *4 | grep -v "\/$") 2>&1 | sort
+cat $(ls -dp *4) 2>&1 | sort
 echo "====Finished 4===="
 
 # Task 5
