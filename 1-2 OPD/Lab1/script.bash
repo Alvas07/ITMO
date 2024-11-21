@@ -73,22 +73,22 @@ echo "====Finished 3===="
 echo "====Started 4===="
 # 4.1
 echo "====4.1===="
-wc -m $(ls -dp */d*) 2>>/tmp/err | sort -nr
+wc -m $(ls -dp d* */d* */*/d* 2>>/tmp/err) 2>>/tmp/err | sort -nr
 # 4.2
 echo "====4.2===="
-ls -lit riolu5 2>>/tmp/err
+ls -lt riolu5 2>>/tmp/err
 # 4.3
 echo "====4.3===="
-cat $(ls -dp */d*) | sort
+cat $(ls -dp d* */d* */*/d*) | sort
 # 4.4
 echo "====4.4===="
-ls -liR riolu5 2>/dev/null | sort -nk3
+ls -lR riolu5 2>/dev/null | sort -nk2
 # 4.5
 echo "====4.5===="
-ls -lit *e */*e */*/*e 2>>/tmp/err | tail -4
+ls -lt *e */*e */*/*e 2>>/tmp/err | tail -4
 # 4.6
 echo "====4.6===="
-cat $(ls -dp *4) 2>&1 | sort
+cat $(ls -dp *4 */*4 */*/*4 2>&1) 2>&1 | sort
 echo "====Finished 4===="
 
 # Task 5
