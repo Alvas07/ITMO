@@ -1,5 +1,6 @@
 import re
 
+
 def parse_json_list(json_elems, json_len):
     global json_index
 
@@ -36,7 +37,7 @@ def parse_json_dict(json_elems, json_len):
         if re.search(r"\}$", json_elems[json_index]):
             return result
 
-        line = re.search(r'(.*): (\[|\{|(.*))', json_elems[json_index])
+        line = re.search(r"(.*): (\[|\{|(.*))", json_elems[json_index])
         key, value = line.group(1, 2)
         if value == "{":
             result[key] = parse_json_dict(json_elems, json_len)
@@ -72,11 +73,17 @@ def convert_xml_list(xml_file, name, xml_list):
     xml_tabs += 1
     for item in xml_list:
         if isinstance(item, str):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="str">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="str">{item}</{name}_item>\n'
+            )
         elif isinstance(item, int):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="int">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="int">{item}</{name}_item>\n'
+            )
         elif isinstance(item, float):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="float">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="float">{item}</{name}_item>\n'
+            )
         elif isinstance(item, dict):
             xml_file.write("\t" * xml_tabs + f'<{name}_item type="dict">\n')
             xml_tabs += 1
@@ -106,6 +113,7 @@ def convert_xml_dict(xml_file, dictionary):
             xml_tabs -= 1
             xml_file.write("\t" * xml_tabs + f"</{key}>\n")
 
+
 def convert_json_to_xml(json_file_path):
     global xml_tabs
     xml_tabs = 1
@@ -114,9 +122,9 @@ def convert_json_to_xml(json_file_path):
 
     with open("data/out2.xml", "w", encoding="utf-8") as xml_file:
         xml_file.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        xml_file.write('<root>\n')
+        xml_file.write("<root>\n")
         convert_xml_dict(xml_file, dictionary)
-        xml_file.write('</root>')
+        xml_file.write("</root>")
 
 
 convert_json_to_xml("data/in.json")

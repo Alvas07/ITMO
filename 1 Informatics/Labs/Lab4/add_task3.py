@@ -1,5 +1,6 @@
 import re
 
+
 def parse_json_number(string):
     result = ""
 
@@ -11,10 +12,10 @@ def parse_json_number(string):
             break
 
     if result.isnumeric():
-        return int(result), string[len(result):].strip()
+        return int(result), string[len(result) :].strip()
     else:
         try:
-            return float(result), string[len(result):].strip()
+            return float(result), string[len(result) :].strip()
         except ValueError:
             return None
 
@@ -26,21 +27,21 @@ def parse_json_string(string):
     result = ""
     last_quote = string.find('"', 1)
     if last_quote != -1:
-        return string[1:last_quote], string[last_quote+1:].strip()
+        return string[1:last_quote], string[last_quote + 1 :].strip()
     else:
         return None
 
 
 def parse_json_bull(string):
     if string.startswith("true"):
-        return 'true', string[4:].strip()
+        return "true", string[4:].strip()
     if string.startswith("false"):
-        return 'false', string[5:].strip()
+        return "false", string[5:].strip()
 
 
 def parse_json_null(string):
-    if string.startswith('null'):
-        return None, string[4:].strip()
+    if string.startswith("null"):
+        return "null", string[4:].strip()
 
 
 def parse_json_comma(string):
@@ -120,7 +121,14 @@ def parse_json_list(string):
 
 
 def parse_json_value(string):
-    parses = [parse_json_number(string), parse_json_string(string), parse_json_bull(string), parse_json_null(string), parse_json_dictionary(string), parse_json_list(string)]
+    parses = [
+        parse_json_number(string),
+        parse_json_string(string),
+        parse_json_bull(string),
+        parse_json_null(string),
+        parse_json_dictionary(string),
+        parse_json_list(string),
+    ]
     for parse in parses:
         if parse:
             return parse[0], parse[1].strip()
@@ -128,9 +136,10 @@ def parse_json_value(string):
 
 def parse_json(json_file_path):
     with open(json_file_path, "r", encoding="utf-8") as json_file:
-        json_string = json_file.read().strip().replace("\n", "")
+        json_string = json_file.read().strip()
         json_string = re.sub(r"\s\s+", "", json_string)
-
+        json_string = re.sub(r": ", ":", json_string)
+        json_string = re.sub(r"\n", "", json_string)
     return parse_json_value(json_string)[0]
 
 
@@ -141,11 +150,17 @@ def convert_xml_list(xml_file, name, xml_list):
     xml_tabs += 1
     for item in xml_list:
         if isinstance(item, str):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="str">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="str">{item}</{name}_item>\n'
+            )
         elif isinstance(item, int):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="int">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="int">{item}</{name}_item>\n'
+            )
         elif isinstance(item, float):
-            xml_file.write("\t" * xml_tabs + f'<{name}_item type="float">{item}</{name}_item>\n')
+            xml_file.write(
+                "\t" * xml_tabs + f'<{name}_item type="float">{item}</{name}_item>\n'
+            )
         elif isinstance(item, dict):
             xml_file.write("\t" * xml_tabs + f'<{name}_item type="dict">\n')
             xml_tabs += 1
@@ -175,6 +190,7 @@ def convert_xml_dict(xml_file, dictionary):
             xml_tabs -= 1
             xml_file.write("\t" * xml_tabs + f"</{key}>\n")
 
+
 def convert_json_to_xml(json_file_path):
     global xml_tabs
     xml_tabs = 1
@@ -183,10 +199,9 @@ def convert_json_to_xml(json_file_path):
 
     with open("data/out3.xml", "w", encoding="utf-8") as xml_file:
         xml_file.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        xml_file.write('<root>\n')
+        xml_file.write("<root>\n")
         convert_xml_dict(xml_file, dictionary)
-        xml_file.write('</root>')
+        xml_file.write("</root>")
 
 
 convert_json_to_xml("data/in.json")
-
