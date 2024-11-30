@@ -17,6 +17,7 @@ if [[ -n "$1" ]]; then
 				echo "The program is finished."
 				exit
 			elif [[ "$command" != + && "$command" != - && "$command" != \* && "$command" != / ]]; then
+				echo "Unknown command."
 				echo "The program is finished."
 				exit
 			fi
