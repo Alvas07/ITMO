@@ -1,0 +1,295 @@
+@startuml
+!pragma layout smetana
+
+package "Interfaces" {
+interface Moveable {
++move(parameters : MoveType, direction : Comeable) : void
+}
+
+interface Flyable {
++prepareToFly() : void
++flyAway() : void
+}
+
+interface Itemable
+
+interface Comeable
+}
+
+
+package "Creatures" {
+abstract class Creature {
++{abstract}move(parameters : MoveType, direction : Comeable) : void
+}
+
+abstract class Human {
+#name : String
++getName() : String
++setName(name : String) : void
++move(parameters : MoveType, direction : Comeable)
++{abstract}say(text : String) : void
++{abstract}call(person : Human, handset : Telephone.Handset) : void
+}
+
+class FrekenBok {
+#name : String
+-isAbleToCome : boolean
++FrekenBok()
++FrekenBok(name: String)
++FrekenBok(name : String, isAbleToCome: boolean)
++call(person : Human, handset : Telephone.Handset) : void
++isFree() : boolean
++say(text : String) : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Frida {
+#name : String
++Frida()
++Frida(name : String)
++call(person : Human, handset : Telephone.Handset) : void
++say(text : String) : void
++want(action : String) : void
++ask(person : Human) : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Malysh {
+#name : String
++Malysh()
++Malysh(name : String)
++call(person : Human, handset : Telephone.Handset) : void
++say(text : String) : void
++lookAt(obj : Comeable) : void
++search(obj : Comeable) : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class MysteryCreature {
+-faceColor : FaceColor
+-headWear : HeadWear
+-looksLikeCarlson : boolean
++MysteryCreature()
++MysteryCreature(faceColor : FaceColor, headWear : HeadWear, looksLikeCarlson : boolean)
++prepareToFly() : void
++flyAway() : void
++move(parameters : MoveType, direction : Comeable) : void
++isLikeCarlson() : boolean
++getFaceColor() : FaceColor
++setFaceColor(color : FaceColor) : void
++getHeadWear() : HeadWear
++setHeadWear(clothItem : HeadWear) : void
++openWindow(Window : window) : void
++closeWindow(Window : window) : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Carlson {
++move(parameters : MoveType, direction : Comeable) : void
++prepareToFly() : void
++flyAway() : void
++toString() : String
+}
+
+Moveable <|.. Creature
+Comeable <|.. Creature
+Creature <|-- Human
+Creature <|-- MysteryCreature
+Creature <|-- Carlson
+Flyable <|.. MysteryCreature
+Flyable <|.. Carlson
+Human <|-- FrekenBok
+Human <|-- Frida
+Human <|-- Malysh
+}
+
+package "Enums" {
+enum MoveType {
+DEFAULT
+FAST
+SLOW
+-description : String
++MoveType()
++MoveType(description : String)
++toString() : String
+}
+
+enum FaceColor {
+DEFAULT
+BLACK
+RED
+GREEN
+WHITE
+-color : String
++FaceColor()
++FaceColor(color: String)
++toString() : String
+}
+
+enum HeadWear {
+NOTHING
+HEADSCARF
+HAT
+CAP
+-clothItem : String
++HeadWear()
++HeadWear(clothItem : String)
++toString() : String
+}
+}
+
+package "Environment" {
+abstract class Room {
+#name : String
+#creaturesInside : List<Creature>
+#itemsInside: List<Itemable>
++getName() : String
++setName(name : String) : void
++setCreatures(creatures : Creature ...) : void
++addCreature(creature : Creature) : void
++removeCreature(creature : Creature) : void
++getCreatures() : List<Creature>
++setItems(items : Itemable ...) : void
++addItem(item : Itemable) : void
++removeItem(item : Itemable) : void
++getItems() : List<Itemable>
+}
+
+class LivingRoom {
+#name : String
+#creaturesInside : List<Creature>
+#itemsInside : List<Itemable>
++LivingRoom()
++LivingRoom(name : String, creaturesInside : List<Creature>, itemsInside : List<Itemable>)
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Kitchen {
+#name : String
+#creaturesInside : List<Creature>
+#itemsInside : List<Itemable>
++Kitchen()
++Kitchen(name : String, creaturesInside : List<Creature>, itemsInside : List<Itemable>)
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Window {
+-isOpen : boolean
++Window()
++Window(isOpen : boolean)
++isWindowOpen() : boolean
++openWindow() : void
++closeWindow() : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Windowswill {
+-itemsOnWindow : List<Itemable>
+-creaturesOnWindow : List<Creature>
++Windowswill()
++Windowswill(itemsOnWindow : List<Itemable>, creaturesOnWindow : List<Creature>)
++setItems(items : Itemable...) : void
++addItem(item : Itemable) : void
++getItems() : List<Itemable>
++removeItem(item : Itemable) : void
++setCreatures(creatures : Creature...) : void
++addCreature(creature : Creature) : void
++getCreatures() : List<Creature>
++removeCreature(creature : Creature) : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Broom {
+-passenger : Flyable
++Broom()
++Broom(passenger : Flyable)
++addPassenger(passenger : Flyable) : void
++removePassenger() : void
++getPassenger() : Flyable
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+class Telephone {
+-model : String
+-phoneNumbers : List<String>
++toString() : String
+}
+
+class Handset {
+-isUp : boolean
++Handset()
++Handset(isUp : boolean)
++isHandsetUp() : boolean
++getUp() : void
++getDown() : void
++toString() : String
++equals(obj : Object) : boolean
++hashCode() : int
+}
+
+Room <|-- LivingRoom
+Room <|-- Kitchen
+Window +-- Windowswill
+Telephone +-- Handset
+Itemable <|.. Broom
+Itemable <|.. Telephone
+Comeable <|.. Broom
+Comeable <|.. Telephone
+Comeable <|.. Window
+Comeable <|.. Room
+Room *-- Creature
+Room o-- Window
+Room o-- Telephone
+}
+
+package "Exceptions" {
+class Exception
+
+class IllegalWindowMove {
+-message : String
++IllegalWindowMove(message: String)
++getMessage() : String
++toString() : String
+}
+
+class IllegalHandsetMove {
+-message : String
++IllegalHandsetMove(message : String)
++getMessage() : String
++toString() : String
+}
+
+class IllegalBroomMove {
+-message : String
++IllegalBroomMove(message : String)
++getMessage() : String
++toString() : String
+}
+
+Exception <|-- IllegalWindowMove
+Exception <|-- IllegalHandsetMove
+Exception <|-- IllegalBroomMove
+}
+
+Moveable o-- MoveType
+MysteryCreature o-- HeadWear
+MysteryCreature o-- FaceColor
+@enduml
