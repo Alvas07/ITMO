@@ -5,6 +5,7 @@ import Enums.MoveType;
 import Environment.*;
 import Exceptions.IllegalBroomMove;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -24,7 +25,7 @@ public class Main {
         System.out.println("\nEnvironment Initialization done\n");
 
         // Characters Initialization
-        Carlson carlson = new Carlson();
+
         FrekenBok frekenBok = new FrekenBok();
         Frida frida = new Frida();
         Malysh malysh = new Malysh();
